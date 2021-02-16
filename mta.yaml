@@ -1,0 +1,71 @@
+_schema-version: "3.2"
+ID: sap-btp-sapui52
+description: A Fiori application.
+version: 0.0.1
+modules:
+- name: sapbtpsapui52
+  type: html5
+  path: .
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: sap-btp-sapui52-destination-content
+  type: com.sap.application.content
+  requires:
+  - name: sap-btp-sapui52-destination-service
+    parameters:
+      content-target: true
+  - name: uaa_sap-btp-sapui52
+    parameters:
+      service-key:
+        name: uaa_sap-btp-sapui52-key
+  - name: sap-btp-sapui52_html_repo_host
+    parameters:
+      service-key:
+        name: sap-btp-sapui52_html_repo_host-key
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Authentication: OAuth2UserTokenExchange
+          Name: basic_service_sap_btp_sapui52_html5_repo_host
+          ServiceInstanceName: sap-btp-sapui52-html5-repo-host
+          ServiceKeyName: uaa_sap-btp-sapui52-key
+          sap.cloud.service: basic.service
+        - Name: basic_service_sap_btp_sapui52_html_repo_host
+          ServiceInstanceName: sap-btp-sapui52-html5-app-host-service
+          ServiceKeyName: sap-btp-sapui52_html_repo_host-key
+          sap.cloud.service: basic.service
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+resources:
+- name: sap-btp-sapui52-destination-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      version: 1.0.0
+    service: destination
+    service-name: sap-btp-sapui52-destination-service
+    service-plan: lite
+- name: uaa_sap-btp-sapui52
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: sap-btp-sapui52-xsuaa-service
+    service-plan: application
+- name: sap-btp-sapui52_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-name: sap-btp-sapui52-html5-app-host-service
+    service-plan: app-host
+parameters:
+  deploy_mode: html5-repo
+  enable-parallel-deployments: true

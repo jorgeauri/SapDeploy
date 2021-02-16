@@ -1,0 +1,16 @@
+#2.0#2021 02 16 14:20:06.416#Z#DEBUG#com.sap.cloud.lm.sl.xs2.f44f53e0-7061-11eb-9f78-eeee0a822c7e.sap-btp-sapui52-destination-content_sap-btp-sapui52-destination-service.synchronousContentDeployTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-21168###
+[SynchronousContentDeployStep] [sap-btp-sapui52-destination-content] [ERROR] Missing mandatory service instance [sap-btp-sapui52-html5-repo-host] required by destination [basic_service_sap_btp_sapui52_html5_repo_host]#
+
+#2.0#2021 02 16 14:20:18.534#Z#DEBUG#com.sap.cloud.lm.sl.xs2.f44f53e0-7061-11eb-9f78-eeee0a822c7e.sap-btp-sapui52-destination-content_sap-btp-sapui52-destination-service.synchronousContentDeployTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-21187###
+[SynchronousContentDeployStep] [sap-btp-sapui52-destination-content] [ERROR] Missing mandatory service instance [sap-btp-sapui52-html5-repo-host] required by destination [basic_service_sap_btp_sapui52_html5_repo_host]#
+
+#2.0#2021 02 16 14:20:31.201#Z#DEBUG#com.sap.cloud.lm.sl.xs2.f44f53e0-7061-11eb-9f78-eeee0a822c7e.sap-btp-sapui52-destination-content_sap-btp-sapui52-destination-service.synchronousContentDeployTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-21203###
+[SynchronousContentDeployStep] [sap-btp-sapui52-destination-content] [ERROR] Missing mandatory service instance [sap-btp-sapui52-html5-repo-host] required by destination [basic_service_sap_btp_sapui52_html5_repo_host]#
+
+#2.0#2021 02 16 14:20:41.347#Z#DEBUG#com.sap.cloud.lm.sl.xs2.f44f53e0-7061-11eb-9f78-eeee0a822c7e.sap-btp-sapui52-destination-content_sap-btp-sapui52-destination-service.synchronousContentDeployTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-21222###
+[SynchronousContentDeployStep] [sap-btp-sapui52-destination-content] [ERROR] Missing mandatory service instance [sap-btp-sapui52-html5-repo-host] required by destination [basic_service_sap_btp_sapui52_html5_repo_host]#
+
